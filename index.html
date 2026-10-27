@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASCII-Kamera</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Silkscreen&family=Pixelify+Sans&family=Share+Tech+Mono&family=Fira+Code&family=Major+Mono+Display&display=block">
+<style>
+  @font-face { font-family: 'Matrix Code'; src: url(data:font/ttf;base64,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) format('truetype'); }
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  canvas { display: block; width: 100vw; height: 100vh; }
+  #ui {
+    position: fixed; top: 10px; left: 10px; z-index: 2;
+    font: 12px monospace; color: #3f3; background: rgba(0,0,0,.6);
+    padding: 8px 10px; border: 1px solid #0a0; border-radius: 4px;
+  }
+  #ui label { display: block; margin: 3px 0; }
+  #ui.hidden { display: none; }
+  #start {
+    position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+    font: 20px monospace; color: #3f3; cursor: pointer; z-index: 3;
+  }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="start">[ Klicken, um Kamera zu starten ]</div>
+<div id="ui">
+  <label>Zeichengröße <input id="size" type="range" min="10" max="40" value="20"></label>
+  <label>Regen-Tempo <input id="speed" type="range" min="1" max="20" value="8"></label>
+  <label>Kontrast <input id="contrast" type="range" min="5" max="30" value="14"></label>
+  <label>Schrift <select id="font">
+    <option value="matrix">Matrix (Original)</option>
+    <option value="'Press Start 2P'">Press Start 2P (Pixel)</option>
+    <option value="'VT323'">VT323 (Terminal)</option>
+    <option value="'Silkscreen'">Silkscreen (Pixel)</option>
+    <option value="'Pixelify Sans'">Pixelify Sans</option>
+    <option value="'Share Tech Mono'">Share Tech Mono</option>
+    <option value="'Fira Code'">Fira Code</option>
+    <option value="'Major Mono Display'">Major Mono Display</option>
+    <option value="'MS Gothic'">MS Gothic (Katakana)</option>
+    <option value="blocks">ASCII-Blöcke ░▒▓█</option>
+    <option value="Consolas">Consolas</option>
+    <option value="'Courier New'">Courier New</option>
+  </select></label>
+  <label>Eigene Schrift (.ttf/.otf) <input id="fontfile" type="file" accept=".ttf,.otf,.woff,.woff2"></label>
+  <div>H = Menü ein/aus</div>
+</div>
+<video id="v" playsinline muted hidden></video>
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const video = document.getElementById('v');
+const sample = document.createElement('canvas');
+const sctx = sample.getContext('2d', { willReadFrequently: true });
+
+const ui = id => document.getElementById(id);
+// Original-Matrix-Schrift (Rezmason/matrix, MIT) und genau die Zeichen, die sie enthält
+const MATRIX_GLYPHS = '\u0022\u002a\u002b\u0030\u0031\u0032\u0033\u0034\u0035\u0037\u0038\u0039\u003a\u003c\u003e\u007a\u007c\u00a6\u254c\u30a2\u30a6\u30a8\u30aa\u30ab\u30ad\u30b1\u30b3\u30b5\u30b7\u30b9\u30bb\u30bd\u30bf\u30c4\u30c6\u30ca\u30cb\u30cc\u30cd\u30cf\u30d2\u30db\u30de\u30df\u30e0\u30e1\u30e2\u30e4\u30e8\u30e9\u30ea\u30ef\u30fc\ua78a';
+const ASCII_GLYPHS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&*+=<>?!/\|';
+const KATA_GLYPHS = 'ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ0123456789';
+let GLYPHS = MATRIX_GLYPHS;
+// Blöcke nach Helligkeit statt zufälliger Zeichen
+const BLOCKS = '░▒▓█';
+let blockMode = false;
+let FONT = '"Matrix Code", monospace';
+
+// Schrift live wechseln; jede Schrift bekommt nur Zeichen, die sie auch enthält
+async function setFont(family, glyphSet) {
+  FONT = `${family}, monospace`;
+  GLYPHS = glyphSet;
+  await document.fonts.load(`20px ${family}`).catch(() => {});
+  if (video.srcObject) layout();
+}
+ui('font').onchange = e => {
+  const v = e.target.value;
+  blockMode = v === 'blocks';
+  if (blockMode) return setFont('Consolas', BLOCKS);
+  if (v === 'matrix') setFont('"Matrix Code"', MATRIX_GLYPHS);
+  else setFont(v, v === "'MS Gothic'" ? KATA_GLYPHS : ASCII_GLYPHS);
+};
+ui('fontfile').onchange = async e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  blockMode = false;
+  const face = new FontFace('Eigene Schrift', await file.arrayBuffer());
+  document.fonts.add(await face.load());
+  setFont('"Eigene Schrift"', ASCII_GLYPHS);
+};
+
+let cell, cols, rows, drops, glyphs;
+
+function layout() {
+  cell = +ui('size').value;
+  canvas.width = innerWidth * devicePixelRatio;
+  canvas.height = innerHeight * devicePixelRatio;
+  ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+  cols = Math.ceil(innerWidth / cell);
+  rows = Math.ceil(innerHeight / cell);
+  sample.width = cols; sample.height = rows;
+  drops = Array.from({ length: cols }, () => ({
+    y: Math.random() * rows * -1,
+    v: 0.5 + Math.random(),
+    len: 8 + Math.random() * 25,
+  }));
+  glyphs = Array.from({ length: cols * rows }, () => GLYPHS[Math.random() * GLYPHS.length | 0]);
+  ctx.font = `${cell}px ${FONT}`;
+  ctx.textBaseline = 'top';
+}
+
+function frame() {
+  const speed = +ui('speed').value / 40;
+  const contrast = +ui('contrast').value / 10;
+
+  // Kamerabild gespiegelt auf Rastergröße herunterskalieren
+  const vw = video.videoWidth, vh = video.videoHeight;
+  const scale = Math.max(cols / vw, rows / vh);
+  const dw = vw * scale, dh = vh * scale;
+  sctx.save();
+  sctx.translate(cols, 0); sctx.scale(-1, 1);
+  sctx.drawImage(video, (cols - dw) / 2, (rows - dh) / 2, dw, dh);
+  sctx.restore();
+  const px = sctx.getImageData(0, 0, cols, rows).data;
+
+  ctx.fillStyle = '#000';
+  ctx.fillRect(0, 0, innerWidth, innerHeight);
+
+  for (let x = 0; x < cols; x++) {
+    const d = drops[x];
+    d.y += d.v * speed * 2;
+    if (d.y - d.len > rows) { d.y = -Math.random() * 20; d.v = 0.5 + Math.random(); d.len = 8 + Math.random() * 25; }
+
+    for (let y = 0; y < rows; y++) {
+      const i = (y * cols + x) * 4;
+      let lum = (0.299 * px[i] + 0.587 * px[i + 1] + 0.114 * px[i + 2]) / 255;
+      lum = Math.min(1, Math.max(0, (lum - 0.5) * contrast + 0.5));
+
+      // Regenspur: hell am Kopf, verblasst nach oben
+      const dist = d.y - y;
+      const trail = dist >= 0 && dist < d.len ? 1 - dist / d.len : 0;
+      const head = dist >= 0 && dist < 1;
+
+      // nur zeichnen, wo das Kamerabild wirklich etwas zeigt
+      if (lum < 0.15) continue;
+      const b = lum * (0.55 + 0.45 * trail);
+
+      const gi = y * cols + x;
+      if (Math.random() < 0.02 + trail * 0.1) glyphs[gi] = GLYPHS[Math.random() * GLYPHS.length | 0];
+      const ch = blockMode ? BLOCKS[Math.min(3, lum * 4 | 0)] : glyphs[gi];
+
+      if (head) {
+        ctx.fillStyle = `rgba(200,255,200,${lum})`;
+      } else {
+        ctx.fillStyle = `rgb(${b * 80 | 0},${(60 + b * 195) | 0},${b * 70 | 0})`;
+        ctx.globalAlpha = Math.min(1, b * 1.4);
+      }
+      ctx.fillText(ch, x * cell, y * cell);
+      ctx.globalAlpha = 1;
+    }
+  }
+  requestAnimationFrame(frame);
+}
+
+ui('start').onclick = async () => {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ video: { width: 1280, height: 720, facingMode: 'user' } });
+    video.srcObject = stream;
+    await video.play();
+    await document.fonts.load('20px "Matrix Code"');
+    ui('start').remove();
+    layout();
+    requestAnimationFrame(frame);
+  } catch (e) {
+    ui('start').textContent = 'Kamera-Zugriff fehlgeschlagen: ' + e.message;
+  }
+};
+ui('size').oninput = () => video.srcObject && layout();
+addEventListener('resize', () => video.srcObject && layout());
+addEventListener('keydown', e => { if (e.key.toLowerCase() === 'h') ui('ui').classList.toggle('hidden'); });
+</script>
+</body>
+</html>
